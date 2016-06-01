@@ -18,6 +18,7 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <bool name="config_enableKeyHandler">true</bool>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N  1 zones as follows:
@@ -401,7 +402,10 @@
         <item>"/system/framework/arm64/boot-core-libart.oat"</item>
    </string-array>
 
-   <!-- Enable blur support -->
-   <bool name="config_uiBlurEnabled">true</bool>
+    <!-- Whether to intercept inputs on screen off. -->
+    <bool name="config_enableKeyHandler">true</bool>
+
+    <!-- Whether device has physical tri state switch -->
+    <bool name="config_hasAlertSlider">true</bool>
 
 </resources>
