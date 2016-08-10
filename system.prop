@@ -8,6 +8,8 @@ persist.audio.fluence.speaker=true
 ro.qc.sdk.audio.fluencetype=fluence
 ro.qc.sdk.audio.ssr=false
 persist.audio.ssr.3mic=false
+media.aac_51_output_enabled=true
+audio.offload.pcm.24bit.enable=true
 use.voice.path.for.pcm.voip=true
 audio.offload.multiple.enabled=true
 audio.offload.gapless.enabled=true
@@ -185,18 +187,6 @@ ro.sys.sdcardfs=true
 
 #Disable 16 bit PCM offload by default
 audio.offload.pcm.16bit.enable=true
-
-audio.offload.passthrough=false
-audio.offload.multiple.enabled=false
-
-#Enable 24 bit PCM offload by default
-audio.offload.pcm.24bit.enable=true
-
-#Enable audio track offload by default
-audio.offload.track.enable=true
-
-#Enable music through deep buffer
-audio.deep_buffer.media=true
 
 # Tethering
 net.tethering.noprovisioning=true
