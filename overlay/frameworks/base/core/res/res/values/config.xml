@@ -424,4 +424,9 @@
     <add-resource type="bool" name="config_hasAlertSlider"></add-resource>
     <bool name="config_hasAlertSlider">true</bool>
 
+    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be 
+         autodetected from the Configuration. --> 
+    <add-resource type="bool" name="config_showNavigationBar"></add-resource> 
+    <bool name="config_showNavigationBar">true</bool> 
+
 </resources>
