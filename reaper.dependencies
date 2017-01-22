@@ -6,9 +6,9 @@
   },
   {
     "remote":     "github",
-    "repository": "andip71/boeffla-kernel-cm-oneplus2",
+    "repository": "zanezam/boeffla-kernel-cm-oneplus2",
     "target_path": "kernel/oneplus/msm8994",
-    "revision":    "boeffla_cm14"
+    "revision":    "boeffla_cm14_aa64u494"
   },
   {
     "repository": "TheMuppets/proprietary_vendor_qcom_binaries",
@@ -22,4 +22,4 @@
   }
 ]
 
- 
+
