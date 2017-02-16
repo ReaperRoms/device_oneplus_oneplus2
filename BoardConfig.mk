@@ -247,5 +247,6 @@ BOARD_USES_QC_TIME_SERVICES := true
 # CM Hardware
 BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
+TARGET_GESTURES_NODE := "/proc/touchpanel/gesture_enable"
 
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
