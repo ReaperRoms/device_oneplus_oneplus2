@@ -19,10 +19,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from oneplus2 device
 $(call inherit-product, device/oneplus/oneplus2/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common BrokenROM stuff.
+$(call inherit-product, vendor/broken/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_oneplus2
+PRODUCT_NAME := broken_oneplus2
 PRODUCT_DEVICE := oneplus2
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -32,6 +32,10 @@ PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 TARGET_VENDOR_PRODUCT_NAME := OnePlus2
 TARGET_VENDOR_DEVICE_NAME := OnePlus2
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=OnePlus2 PRODUCT_NAME=OnePlus2
+
+# Broken Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+	DEVICE_MAINTAINERS="David J. Vandenburgh (Seraph08)"
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.model
 
