@@ -34,19 +34,17 @@ TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := msm8994
 TARGET_BOARD_PLATFORM := msm8994
 TARGET_NO_BOOTLOADER := true
-BOOTLOADER_GCC_VERSION := arm-eabi-4.8
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8994
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno430
-TARGET_HARDWARE_3D := true
 
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := cortex-a53
+TARGET_CPU_VARIANT := generic
 
 TARGET_CPU_CORTEX_A53 := true
 TARGET_USES_64_BIT_BINDER := true
@@ -58,7 +56,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-5 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-3
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
@@ -118,9 +116,6 @@ BOARD_USES_QCNE := true
 # Cpusets
 ENABLE_CPUSETS := true
 
-BOARD_EGL_CFG := $(PLATFORM_PATH)/egl.cfg
-BOARD_SECCOMP_POLICY := $(PLATFORM_PATH)/seccomp
-
 # GPS
 TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
@@ -156,6 +151,7 @@ TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_oneplus2
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+TARGET_LIBINIT_DEFINES_FILE := $(PLATFORM_PATH)/init/init_oneplus2.cpp
 
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
@@ -167,7 +163,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 PROTOBUF_SUPPORTED := false
 
 #Enable HW based full disk encryption
-TARGET_HW_DISK_ENCRYPTION := false
+TARGET_HW_DISK_ENCRYPTION := true
 
 #Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
@@ -213,7 +209,7 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-CONFIG_EAP_PROXY := qmi
+#CONFIG_EAP_PROXY := qmi
 CONFIG_EAP_PROXY_DUAL_SIM := true
 CONFIG_EAP_PROXY_AKA_PRIME := true
 CONFIG_EAP_PROXY_MSM8994_TARGET := true
@@ -242,7 +238,6 @@ BOARD_USES_QC_TIME_SERVICES := true
 
 # CM Hardware
 BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
-TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
-TARGET_GESTURES_NODE := "/proc/touchpanel/gesture_enable"
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap"
 
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
